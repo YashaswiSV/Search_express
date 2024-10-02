@@ -27,6 +27,12 @@ const empSearch=async(req , res)=>{
     console.log(data);
     res.send(data);
 }
+const empSearchBoth=async(req , res)=>{
+    const {ename,ecity}=req.body;                                  //destructure
+    const data=await empModel.find({ $and:[{"empname":ename},{"empcity":ecity}]});
+    console.log(data);
+    res.send(data);
+}
 
 
 
@@ -35,5 +41,6 @@ module.exports={
     empInfo,
     empSave,
     empdisplay,
-    empSearch
+    empSearch,
+    empSearchBoth
 }

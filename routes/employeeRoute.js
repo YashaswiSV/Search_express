@@ -6,7 +6,7 @@ route.get("/info" ,EmpContoller.empInfo )
 route.post("/save" , EmpContoller.empSave)     
 route.get("/display" , EmpContoller.empdisplay)
 route.post("/search" , EmpContoller.empSearch) //data send (post se hi data send)
-
+route.post("/searchBoth" , EmpContoller.empSearchBoth)
 
 
 
